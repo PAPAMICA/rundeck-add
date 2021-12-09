@@ -3,6 +3,7 @@ if [ -z "$1" ]; then
         NODENAME=$(uname -n)
     else
         NODENAME=$1
+        sudo hostname $1
 fi
 IP=$(curl -s http://whatismyip.akamai.com/)
 PORT=$(grep "Port " /etc/ssh/sshd_config | awk '{print $2}')
