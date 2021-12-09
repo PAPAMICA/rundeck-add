@@ -6,7 +6,7 @@ OS=$(echo $(lsb_release -si)-$(lsb_release -sr))
 USERNAME=$(whoami)
 
 cat <<EOF >>$NODENAME.yml
-$NODENAME
+$NODENAME:
     nodename: $NODENAME
     tags: $OS
     hostname: $HOSTNAME:$PORT
