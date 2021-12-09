@@ -12,6 +12,7 @@ $NODENAME:
     hostname: $IP:$PORT
     username: $USERNAME
     ssh-key-storage-path: keys/rundeck
+    sudo-command-enabled: true
 EOF
 
 curl --user 'webdav:webdav1309' -T "$NODENAME.yml" 'http://nurion.papamica.com:1511'
