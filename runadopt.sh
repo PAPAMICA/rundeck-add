@@ -1,5 +1,9 @@
 #!/bin/bash
-NODENAME=$(uname -n)
+if [ -z "$1" ]; then
+        NODENAME=$(uname -n)
+    else
+        NODENAME=$1
+fi
 IP=$(curl -s http://whatismyip.akamai.com/)
 PORT=$(grep "Port " /etc/ssh/sshd_config | awk '{print $2}')
 OS=$(echo $(lsb_release -si)-$(lsb_release -sr))
