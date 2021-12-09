@@ -1,6 +1,6 @@
 #!/bin/bash
 NODENAME=$(uname -n)
-HOSTNAME=$(hostname -f)
+IP=$(curl -s http://whatismyip.akamai.com/)
 PORT=$(grep "Port " /etc/ssh/sshd_config | awk '{print $2}')
 OS=$(echo $(lsb_release -si)-$(lsb_release -sr))
 USERNAME=$(whoami)
@@ -9,7 +9,7 @@ cat <<EOF >>$NODENAME.yml
 $NODENAME:
     nodename: $NODENAME
     tags: $OS
-    hostname: $HOSTNAME:$PORT
+    hostname: $IP:$PORT
     username: $USERNAME
     ssh-key-storage-path: keys/rundeck
 EOF
