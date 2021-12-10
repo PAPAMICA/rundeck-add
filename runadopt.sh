@@ -30,7 +30,6 @@ read -p "  Install Zabbix agent ? (Y/n) " installzabbix
   if [[ "$installzabbix" == "n" ]]; then
         exit
     else
-        JSONDATA=$(echo "'{\"field1\":\"$NODENAME\"}'")
-        curl -H "Content-Type: application/json" -X POST -d $JSONDATA https://rundeck.papamica.com/api/40/webhook/U1mWyNjTEKJc6ZjpGF4Q3msb4FIsR7Gb#New_Server_%3E_Agent_Zabbix
+        curl -H "Content-Type: application/json" -X POST -d '{"field1":"'$NODENAME'"}' https://rundeck.papamica.com/api/40/webhook/U1mWyNjTEKJc6ZjpGF4Q3msb4FIsR7Gb#New_Server_%3E_Agent_Zabbix
         echo "    => Zabbix Agent install started !"
   fi
