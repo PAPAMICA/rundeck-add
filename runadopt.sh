@@ -1,5 +1,4 @@
 #!/bin/bash
-shopt -s expand_aliases
 if [ -z "$1" ]; then
         NODENAME=$(uname -n)
     else
