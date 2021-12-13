@@ -26,4 +26,4 @@ echo "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQCqRxD6h9I3+eVB6kEbAZ3pqBJO5EpWQr/hE0
 echo "    => SSH Key added !"
 sleep 2
 curl -H "Content-Type: application/json" -X POST -d '{"node":"'$NODENAME'"}' https://rundeck.papamica.com/api/40/webhook/U1mWyNjTEKJc6ZjpGF4Q3msb4FIsR7Gb#New_Server_%3E_Agent_Zabbix
-echo "    => Install Zabbbix Agent with started !"
+echo "    => Install Zabbbix Agent started !"
