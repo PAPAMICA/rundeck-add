@@ -20,10 +20,10 @@ $NODENAME:
     sudo-command-enabled: true
 EOF
 
-curl --user 'webdav:webdav1309' -T "$NODENAME.yml" 'http://nurion.papamica.com:1511'
+curl --user 'webdav:webdav1309' -T "$NODENAME.yml" 'http://nurion.papamica.net:1511'
 echo "    => Inventory file sended !"
-echo "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQCqRxD6h9I3+eVB6kEbAZ3pqBJO5EpWQr/hE0w/pxPYQ6dRC9FlvYJIkvEttnTWGwAaTzW/ysoXsgsJnCDOxG9QTYI1lA+2WhTTDxfYUHD1SKPua6nvrQdu4Z9+8cz5EqR5ppzWUH0lT//0aaYAuvFDuAzicxC4d+Y+9Hik8BgVDG3vXficQCtriRcWaFrKscIkYQKi6PRqMljFeAFVlfvrELkWC38JHhdcTwO6X3SCyGlcqvdkaqhKTb+61ZkiReSVARSB6CswdsG1XmTRFdbBm1WNeCmYhOPDvyEri/E7vY4WvqT5JFrcryMWPVHwE8yjQ5DudpPX5PT6GeABf/MZ3cVJPQ+Wy5/TZLSq4/jkS6UffAM7nLGvSEwWHLoMZRIhF6Z9vrc5pfGFI4pf7lm6z08Tk81s/wkcOw7nZzxElJvFlGq3EI6oCt6GgS92hamoCHwUl7hXFwIvKCfc8Cehsx5pSN8gmOd+l4SdRZsu+fnltlEpLPY97Ul7BAvBHXU= root@NURION.PAPAMICA.COM #RunDeck" >> ~/.ssh/authorized_keys
+echo "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDHKFRjIpp1QrIpq1CPgjeC9bd0wfLaboPJ5i/iA4tO4M0TLw2SYBkNVL93VX+rykw7snGfceq/K4zDhGX8xZYI+JLFMjPpFwHHoP0sGtpDzGdP1vs6h2ucu4Sw9JzBquW5bPwoGjY/Zilm7Hneu8AoolyhQYf65xDD6WG35+s3p++NaPXVXyq2ek4G5IcqDyjGIyBp3xxNPPQvKSty8V+gmK1Cy2qxgjuz1XZRwiLfQFu4MuTEafq4E1+ZUgrIxwvLVBhMT8Z1srGNxzX/N+lL6x4bYH1D04ZiXOmzCLcdX2M3wAjQGUsu79Artnme1SrRO6yADAh8oMAqcp9ug9A5 #RunDeck" >> ~/.ssh/authorized_keys
 echo "    => SSH Key added !"
-sleep 2
-curl -H "Content-Type: application/json" -X POST -d '{"node":"'$NODENAME'"}' https://rundeck.papamica.com/api/40/webhook/U1mWyNjTEKJc6ZjpGF4Q3msb4FIsR7Gb#New_Server_%3E_Agent_Zabbix
-echo "    => Install Zabbbix Agent started !"
+#sleep 2
+#curl -H "Content-Type: application/json" -X POST -d '{"node":"'$NODENAME'"}' https://rundeck.papamica.net/api/40/webhook/U1mWyNjTEKJc6ZjpGF4Q3msb4FIsR7Gb#New_Server_%3E_Agent_Zabbix
+#echo "    => Install Zabbbix Agent started !"
